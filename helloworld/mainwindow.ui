@@ -14,25 +14,12 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>80</y>
-      <width>301</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>510</y>
-      <width>721</width>
+      <x>270</x>
+      <y>820</y>
+      <width>281</width>
       <height>61</height>
      </rect>
     </property>
@@ -42,16 +29,16 @@
      </font>
     </property>
     <property name="text">
-     <string>应用程序在ARM9板中显示中文</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>240</y>
-      <width>641</width>
-      <height>71</height>
+      <y>40</y>
+      <width>621</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -60,7 +47,7 @@
      </font>
     </property>
     <property name="text">
-     <string>你好，QT</string>
+     <string/>
     </property>
    </widget>
   </widget>
