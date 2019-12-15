@@ -1,7 +1,9 @@
 #pragma execution_character_set("utf-8")
-#include<QApplication>
-#include "mainwindow.h"
+#include <QApplication>
 #include <QTextCodec>
+#include <QDebug>
+#include "mainwindow.h"
+#include "workthread.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,6 +16,10 @@ int main(int argc, char *argv[])
     w.setWindowTitle("显示中文");
     w.show();
 
+    workthread *task = new workthread; // (3) 创建一个 WorkThread 对象
+    qDebug()<<"线程测试开始:";
+    task->start();//启动该线程 (4)
+    qDebug()<<"线程测试结束:";
 
     return a.exec();
 }

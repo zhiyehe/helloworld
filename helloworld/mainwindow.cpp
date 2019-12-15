@@ -43,7 +43,6 @@ void MainWindow::paintEvent(QPaintEvent *event)
     painter.drawLine(QPointF(640, 180), QPointF(600, 180));
     painter.drawLine(QPointF(640, 180), QPointF(640, 220));
 
-
     painter.drawLine(QPointF(160, 780), QPointF(160, 740));
     painter.drawLine(QPointF(160, 780), QPointF(200, 780));
 
