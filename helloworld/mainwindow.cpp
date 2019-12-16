@@ -58,6 +58,9 @@ void MainWindow::timerUpDate()
 
     QString str2 = "请正对屏幕";
     ui->label->setText(str2);
+
+    QString str3 = "Please face the screen";
+    ui->label_3->setText(str3);
 }
 
 MainWindow::~MainWindow()

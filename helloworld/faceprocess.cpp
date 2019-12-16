@@ -276,7 +276,8 @@ string read_serial_no(string file_path) {
 
 void initfaceprocess(void)
 {
-    SAMPLE_VIO_Rotate(0);
+    //SAMPLE_VIO_Rotate(0);
+    SAMPLE_VIO_ViDoublePipeRouteToGetVPSS(0);
     return;
 }
 

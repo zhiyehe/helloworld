@@ -9,14 +9,13 @@ workthread::workthread()
 
 void workthread::run()
 {
-    initfaceprocess();
     while(true)
     {
         workCount++;
         if(workCount>=1000) workCount=0;
         qDebug()<<"workthread"<<workCount;
-        sleep(1);//线程 睡眠一秒一次
+        sleep(60);//线程 睡眠一秒一次
 
-        faceprocess();
+        //faceprocess();
     }
 }

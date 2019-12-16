@@ -4,9 +4,11 @@
 #include <QDebug>
 #include "mainwindow.h"
 #include "workthread.h"
+#include "faceprocess.h"
 
 int main(int argc, char *argv[])
 {
+    initfaceprocess();
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("GB2312"));
 
     QApplication a(argc, argv);
