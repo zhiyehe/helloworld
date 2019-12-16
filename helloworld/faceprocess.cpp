@@ -1,4 +1,5 @@
 #include "faceprocess.h"
+#include <QDebug>
 #include <HISI.h>
 #include <stdio.h>
 #include <unistd.h>  //包含了Linux C 中的函数getcwd()
@@ -312,4 +313,11 @@ int faceprocess(void) {
         test_image();
     }
     return 0;
+}
+
+extern "C" {
+void callback(void)
+{
+    qDebug()<<"in c++ callback";
+}
 }
