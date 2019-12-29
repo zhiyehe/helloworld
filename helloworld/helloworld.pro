@@ -16,14 +16,17 @@ CONFIG += debug_and_release
 SOURCES += main.cpp \
     mainwindow.cpp \
     workthread.cpp \
-    faceprocess.cpp
+    faceprocess.cpp \
+    dialog.cpp
 
 HEADERS  += \
     mainwindow.h \
     workthread.h \
-    faceprocess.h
+    faceprocess.h \
+    dialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialog.ui
 
 QMAKE_CXXFLAGS += -O0
 #hisisdk

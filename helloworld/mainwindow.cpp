@@ -168,3 +168,10 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+    dialog = new Dialog(this);
+    dialog->setModal(false);
+    dialog->show();
+}

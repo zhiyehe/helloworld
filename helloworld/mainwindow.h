@@ -5,6 +5,7 @@
 #include <QLabel>
 #include <QStatusBar>
 #include <QMouseEvent>
+#include "dialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,6 +16,8 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 private slots:
     void timerUpDate();
+
+    void on_pushButton_clicked();
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -34,6 +37,7 @@ private:
     Ui::MainWindow *ui;
     QLabel *statusLabel;
     QLabel *MousePosLabel;
+    Dialog *dialog;
 };
 
 #endif // MAINWINDOW_H
