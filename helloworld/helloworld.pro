@@ -25,6 +25,7 @@ HEADERS  += \
 
 FORMS    += mainwindow.ui
 
+QMAKE_CXXFLAGS += -O0
 #hisisdk
 INCLUDEPATH += /data/HISILIB
 LIBS += -L/data/HISILIB -lHISI -lsns_imx307_2l -lsns_imx327 -lsns_imx415 -lsns_os04b10 -lsns_ov12870 -lisp -lsns_imx307 -lsns_imx335 -lsns_imx458 -lsns_os05a -lsns_sc4210 \
