@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,13 +17,15 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     workthread.cpp \
     faceprocess.cpp \
-    dialog.cpp
+    dialog.cpp \
+    xml.cpp
 
 HEADERS  += \
     mainwindow.h \
     workthread.h \
     faceprocess.h \
-    dialog.h
+    dialog.h \
+    xml.h
 
 FORMS    += mainwindow.ui \
     dialog.ui

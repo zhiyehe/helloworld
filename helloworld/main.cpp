@@ -5,12 +5,15 @@
 #include "mainwindow.h"
 #include "workthread.h"
 #include "faceprocess.h"
+#include "xml.h"
 
 MainWindow *w_ptr;
 int main(int argc, char *argv[])
 {
     system("ulimit -s unlimited");
     initfaceprocess();
+    qDebug()<<"write xml to file...";
+    WriteXml();
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("GB2312"));
 
     QApplication a(argc, argv);
