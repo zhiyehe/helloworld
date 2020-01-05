@@ -18,7 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QTime time = QTime::currentTime();
     ui->setupUi(this);
     qDebug()<<"hello start time:  "<<time.hour()<<":"<<time.minute();
-
+    QCursor mycur(QPixmap("/data/shubiao.png"));
+    QApplication::setOverrideCursor(mycur);
     ui->label->show();
 
     QTimer *timer = new QTimer(this);
