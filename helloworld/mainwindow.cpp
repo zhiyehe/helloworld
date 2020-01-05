@@ -40,6 +40,12 @@ MainWindow::MainWindow(QWidget *parent) :
     //设置窗体追踪鼠标
     this->setMouseTracking(true);
     this->resize(800,1280);
+
+    //face information input
+    dialog = new Dialog(this);
+    dialog->setModal(false);
+    dialog->hide();
+    bshowdialog = false;
 }
 
 void MainWindow::paintEvent(QPaintEvent *event)
@@ -137,12 +143,12 @@ void MainWindow::mouseMoveEvent(QMouseEvent *e)
 //mouseReleaseEvent()函数为鼠标松开事件响应函数
 void MainWindow::mouseReleaseEvent(QMouseEvent *e)
 {
-
+    Q_UNUSED(e);
 }
 //mouseDoubleClickEvent()函数为鼠标双击事件响应函数
 void MainWindow::mouseDoubleClickEvent(QMouseEvent *e)
 {
-
+    Q_UNUSED(e);
 }
 
 void MainWindow::showfacedectetresult(int btrue)
@@ -172,7 +178,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    dialog = new Dialog(this);
-    dialog->setModal(false);
-    dialog->show();
+    if(not bshowdialog)
+    {
+        dialog->show();
+        bshowdialog = true;
+    }
+    else
+    {
+        dialog->hide();
+        bshowdialog = false;
+    }
 }

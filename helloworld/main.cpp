@@ -10,10 +10,9 @@
 MainWindow *w_ptr;
 int main(int argc, char *argv[])
 {
-    system("ulimit -s unlimited");
     initfaceprocess();
-    qDebug()<<"write xml to file...";
-    WriteXml();
+    qDebug()<<"read xml from file...";
+    ReadXml();
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("GB2312"));
 
     QApplication a(argc, argv);

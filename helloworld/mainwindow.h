@@ -38,6 +38,7 @@ private:
     QLabel *statusLabel;
     QLabel *MousePosLabel;
     Dialog *dialog;
+    bool bshowdialog;
 };
 
 #endif // MAINWINDOW_H

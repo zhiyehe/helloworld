@@ -5,7 +5,7 @@
 void WriteXml()
 {
     //打开或创建文件
-    QFile file("test.xml"); //相对路径、绝对路径、资源路径都可以
+    QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
     if(!file.open(QFile::WriteOnly|QFile::Truncate)) //可以用QIODevice，Truncate表示清空原来的内容
         return;
 
@@ -61,7 +61,7 @@ void WriteXml()
 void ReadXml()
 {
     //打开或创建文件
-    QFile file("test.xml"); //相对路径、绝对路径、资源路径都行
+    QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都行
     if(!file.open(QFile::ReadOnly))
         return;
 
@@ -99,7 +99,7 @@ void ReadXml()
 void AddXml()
 {
     //打开文件
-    QFile file("test.xml"); //相对路径、绝对路径、资源路径都可以
+    QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
     if(!file.open(QFile::ReadOnly))
         return;
 
@@ -139,7 +139,7 @@ void AddXml()
 void RemoveXml()
 {
     //打开文件
-    QFile file("test.xml"); //相对路径、绝对路径、资源路径都可以
+    QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
     if(!file.open(QFile::ReadOnly))
         return;
 
@@ -173,7 +173,7 @@ void RemoveXml()
 void UpdateXml()
 {
     //打开文件
-    QFile file("test.xml"); //相对路径、绝对路径、资源路径都可以
+    QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
     if(!file.open(QFile::ReadOnly))
         return;
 
@@ -205,7 +205,6 @@ void UpdateXml()
 
 int testmain()
 {
-
     qDebug()<<"write xml to file...";
     WriteXml();
     qDebug()<<"read xml to display...";
@@ -217,5 +216,4 @@ int testmain()
     qDebug()<<"update contents to xml...";
     UpdateXml();
     return 0;
-
 }
