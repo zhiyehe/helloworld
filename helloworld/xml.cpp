@@ -1,11 +1,15 @@
 #include <QCoreApplication>
-#include <QtXml> //也可以include <QDomDocument>
+#include <QtXml>
 
 //写xml
 void WriteXml()
 {
     //打开或创建文件
+#ifdef FORARM
     QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
+#else
+    QFile file("C:\\work\\hisi\\test.xml");
+#endif
     if(!file.open(QFile::WriteOnly|QFile::Truncate)) //可以用QIODevice，Truncate表示清空原来的内容
         return;
 
@@ -54,14 +58,17 @@ void WriteXml()
     QTextStream out_stream(&file);
     doc.save(out_stream,4); //缩进4格
     file.close();
-
 }
 
 //读xml
 void ReadXml()
 {
     //打开或创建文件
-    QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都行
+#ifdef FORARM
+    QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
+#else
+    QFile file("C:\\work\\hisi\\test.xml");
+#endif
     if(!file.open(QFile::ReadOnly))
         return;
 
@@ -92,14 +99,17 @@ void ReadXml()
         }
         node=node.nextSibling(); //下一个兄弟节点,nextSiblingElement()是下一个兄弟元素，都差不多
     }
-
 }
 
 //增加xml内容
 void AddXml()
 {
     //打开文件
+#ifdef FORARM
     QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
+#else
+    QFile file("C:\\work\\hisi\\test.xml");
+#endif
     if(!file.open(QFile::ReadOnly))
         return;
 
@@ -139,7 +149,11 @@ void AddXml()
 void RemoveXml()
 {
     //打开文件
+#ifdef FORARM
     QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
+#else
+    QFile file("C:\\work\\hisi\\test.xml");
+#endif
     if(!file.open(QFile::ReadOnly))
         return;
 
@@ -173,7 +187,11 @@ void RemoveXml()
 void UpdateXml()
 {
     //打开文件
+#ifdef FORARM
     QFile file("/data/test.xml"); //相对路径、绝对路径、资源路径都可以
+#else
+    QFile file("C:\\work\\hisi\\test.xml");
+#endif
     if(!file.open(QFile::ReadOnly))
         return;
 

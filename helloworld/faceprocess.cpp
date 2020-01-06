@@ -1,12 +1,13 @@
 #include "faceprocess.h"
 #include <QDebug>
-#include <HISI.h>
 #include <stdio.h>
 #include <unistd.h>  //包含了Linux C 中的函数getcwd()
+#include "mainwindow.h"
+#ifdef FORARM
 #include <opencv2/opencv.hpp>
 #include <zqzn_sdk.h>
 #include <zqzn_sdk_helper.h>
-#include "mainwindow.h"
+#include <HISI.h>
 extern MainWindow *w_ptr;
 #define FILEPATH_MAX (100)
 
@@ -70,3 +71,4 @@ void callback(unsigned char* rgb_ptr, int size)
 }
 
 }
+#endif

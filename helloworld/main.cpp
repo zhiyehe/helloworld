@@ -10,7 +10,9 @@
 MainWindow *w_ptr;
 int main(int argc, char *argv[])
 {
+#ifdef FORARM
     initfaceprocess();
+#endif
     qDebug()<<"read xml from file...";
     ReadXml();
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("GB2312"));
@@ -18,7 +20,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     MainWindow w;
     w.setFont(QFont("wenquanyi",20,QFont::Normal));
-    w.setWindowTitle("显示中文");
+    w.setWindowTitle("人脸检测系统");
     w.show();
     w_ptr= &w;
     workthread *task = new workthread; // (3) 创建一个 WorkThread 对象

@@ -18,7 +18,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QTime time = QTime::currentTime();
     ui->setupUi(this);
     qDebug()<<"hello start time:  "<<time.hour()<<":"<<time.minute();
+#ifdef FORARM
     QCursor mycur(QPixmap("/data/shubiao.png"));
+#else
+    QCursor mycur(QPixmap("C:\\work\\hisi\\shubiao.png"));
+#endif
     QApplication::setOverrideCursor(mycur);
     ui->label->show();
 
