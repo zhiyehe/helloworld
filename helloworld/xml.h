@@ -1,9 +1,9 @@
 #ifndef XML_H
 #define XML_H
-void WriteXml();
+#include <QString>
+void WriteXml(QString name, QString number);
 void ReadXml();
-void AddXml();
-void RemoveXml();
-void UpdateXml();
+void RemoveXml(QString name, QString number);
+void UpdateXml(QString name, QString number);
 #endif // XML_H
 

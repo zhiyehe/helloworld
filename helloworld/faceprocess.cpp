@@ -11,9 +11,9 @@
 extern MainWindow *w_ptr;
 #define FILEPATH_MAX (100)
 
-string serial_no = "YMA6-JA8B-4D78-ER97";
-string video_file = "test.mp4";
-string db_file = "person.db";
+extern bool bGetData;
+extern int bmpSize;
+extern unsigned char bmpData[];
 using namespace cv;
 #define TAG "ZqznSDK"
 
@@ -49,6 +49,12 @@ void callback(unsigned char* rgb_ptr, int size)
 {
     //qDebug()<<"in c++ callback, size"<<size;
     //LOGD(TAG, "sdk version:%s\n", get_sdk_version().c_str());
+    if(bGetData and sdk_handle)
+    {
+       memcpy(bmpData, rgb_ptr, size);
+       bmpSize = size;
+    }
+
     if (sdk_handle > 0) {
         LOGD(TAG, "algos version:%s\n", print_algos_version(sdk_handle).c_str());
         int ret = 0;
